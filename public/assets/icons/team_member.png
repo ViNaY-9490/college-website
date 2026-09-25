@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - Page Not Found | E-Cell</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background-color: #1A1A1A;
+            min-height: 100vh;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        /* Particle Background Animation */
+        .particle-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .particle {
+            position: absolute;
+            background: radial-gradient(circle, rgba(179, 139, 0, 0.8) 0%, rgba(255, 215, 0, 0.4) 50%, transparent 100%);
+            border-radius: 50%;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(0deg); opacity: 0.7; }
+            50% { transform: translateY(-20px) rotate(180deg); opacity: 1; }
+        }
+
+        .container {
+            position: relative;
+            z-index: 2;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px 5%;
+        }
+
+        .error-content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            margin-bottom: 50px;
+        }
+
+        .logo-circle {
+            position: absolute;
+            left: 0;
+            top: 16px;
+            width: 220px;
+            height: 220px;
+            border-radius: 50%;
+            border: 1.5px solid #B38B00;
+            background: linear-gradient(135deg, rgba(179, 139, 0, 0.1) 0%, rgba(255, 215, 0, 0.05) 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 1;
+        }
+
+        .logo-circle img {
+            width: 120px;
+            height: 120px;
+            filter: brightness(0) invert(1);
+        }
+
+        .error-box {
+            margin-left: auto;
+            width: 480px;
+            padding: 30px 50px 30px 40px;
+            border-radius: 32px;
+            border: 1.5px solid #B38B00;
+            background: linear-gradient(135deg, rgba(179, 139, 0, 0.1) 0%, rgba(255, 215, 0, 0.05) 100%);
+            text-align: center;
+            position: relative;
+            z-index: 2;
+        }
+
+        .error-code {
+            font-size: 120px;
+            font-weight: bold;
+            color: white;
+            line-height: 1;
+            margin-bottom: 25px;
+        }
+
+        .home-button {
+            display: inline-block;
+            padding: 15px 30px;
+            background: linear-gradient(135deg, #FFD700 0%, #B38B00 100%);
+            color: black;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 16px;
+            border-radius: 30px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .home-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        .error-messages {
+            max-width: 800px;
+            text-align: center;
+            margin-bottom: 100px;
+        }
+
+        .primary-message {
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            letter-spacing: 0.5px;
+            margin-bottom: 12px;
+            line-height: 1.4;
+        }
+
+        .secondary-message {
+            color: rgba(255, 255, 255, 0.54);
+            font-size: 16px;
+            letter-spacing: 0.5px;
+            line-height: 1.4;
+        }
+
+        .footer {
+            margin-top: auto;
+            padding: 20px 0;
+            text-align: center;
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 14px;
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 600px) {
+            .error-content {
+                flex-direction: column;
+                align-items: center;
+                gap: 20px;
+            }
+
+            .logo-circle {
+                position: static;
+                width: 140px;
+                height: 140px;
+            }
+
+            .logo-circle img {
+                width: 80px;
+                height: 80px;
+            }
+
+            .error-box {
+                width: 320px;
+                padding: 20px 10px 20px 30px;
+                margin-left: 0;
+            }
+
+            .error-code {
+                font-size: 80px;
+                margin-bottom: 20px;
+            }
+
+            .home-button {
+                padding: 12px 20px;
+            }
+
+            .primary-message {
+                font-size: 16px;
+            }
+
+            .secondary-message {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="particle-bg" id="particleBg"></div>
+
+    <div class="container">
+        <div class="error-content">
+            <div class="logo-circle">
+                <img src="icons/Icon-192.png" alt="E-Cell Logo" onerror="this.style.display='none'">
+            </div>
+            <div class="error-box">
+                <div class="error-code">404</div>
+                <a href="/" class="home-button">Go to Home Page</a>
+            </div>
+        </div>
+
+        <div class="error-messages">
+            <div class="primary-message">
+                THE RESOURCE YOU'RE LOOKING FOR IS EITHER UNAVAILABLE OR DOES NOT EXIST.
+            </div>
+            <div class="secondary-message">
+                CLICK THE BUTTON ABOVE TO RETURN HOME AND KEEP EXPLORING.
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>&copy; 2024 E-Cell. All rights reserved.</p>
+        </div>
+    </div>
+
+    <script>
+        // Particle animation
+        function createParticles() {
+            const particleBg = document.getElementById('particleBg');
+            const particleCount = 50;
+
+            for (let i = 0; i < particleCount; i++) {
+                const particle = document.createElement('div');
+                particle.className = 'particle';
+
+                // Random size between 2px and 8px
+                const size = Math.random() * 6 + 2;
+                particle.style.width = size + 'px';
+                particle.style.height = size + 'px';
+
+                // Random position
+                particle.style.left = Math.random() * 100 + '%';
+                particle.style.top = Math.random() * 100 + '%';
+
+                // Random animation delay
+                particle.style.animationDelay = Math.random() * 6 + 's';
+                particle.style.animationDuration = (Math.random() * 4 + 4) + 's';
+
+                particleBg.appendChild(particle);
+            }
+        }
+
+        // Initialize particles when page loads
+        document.addEventListener('DOMContentLoaded', createParticles);
+
+        // Redirect to home page after 10 seconds (optional)
+        setTimeout(() => {
+            const redirectMessage = document.createElement('div');
+            redirectMessage.style.cssText = `
+                position: fixed;
+                bottom: 20px;
+                right: 20px;
+                background: rgba(179, 139, 0, 0.9);
+                color: white;
+                padding: 10px 15px;
+                border-radius: 20px;
+                font-size: 14px;
+                z-index: 1000;
+            `;
+            redirectMessage.textContent = 'Redirecting to home page...';
+            document.body.appendChild(redirectMessage);
+
+            setTimeout(() => {
+                window.location.href = '/';
+            }, 2000);
+        }, 10000);
+    </script>
+</body>
+</html>
