@@ -624,7 +624,7 @@ export default function JoinApplicationForm({
             className="inline-flex items-center gap-1.5 text-[11px] font-semibold text-amber-400 hover:text-amber-300 transition-colors cursor-pointer"
           >
             <Sparkles className="w-3.5 h-3.5" />
-            <span>Polish Statement with Ox Alpha AI</span>
+            <span>Polish Statement with ECell Help Assistance</span>
           </button>
         </div>
 
@@ -633,7 +633,7 @@ export default function JoinApplicationForm({
           rows={3}
           value={formData.whyJoin}
           onChange={(e) => setFormData({ ...formData, whyJoin: e.target.value })}
-          placeholder="Share your personal motivation, entrepreneurial curiosity, and what you aim to achieve. (Tip: Type your thoughts and click 'Polish Statement with Ox Alpha AI' to elevate it!)"
+          placeholder="Share your personal motivation, entrepreneurial curiosity, and what you aim to achieve. (Tip: Type your thoughts and click 'Polish Statement with ECell Help Assistance' to elevate it!)"
           className="w-full px-3.5 py-2.5 rounded-xl bg-white/5 border border-white/10 text-white placeholder-slate-500 text-xs sm:text-sm focus:outline-none focus:border-amber-400"
         />
       </div>

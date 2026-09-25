@@ -450,7 +450,7 @@ export default function EventRegistrationForm({
         >
           <span className="flex items-center gap-2">
             <Bot className="w-4 h-4 text-amber-400" />
-            <span>Brainstorm Pitch with Ox Alpha AI</span>
+            <span>Brainstorm Pitch with ECell Help Assistance</span>
           </span>
           <span className="text-[11px] text-amber-400 group-hover:underline">
             {showAiHelper ? 'Close' : 'Try AI Assistant'}
@@ -460,7 +460,7 @@ export default function EventRegistrationForm({
         {showAiHelper && (
           <div className="mt-3 p-4 rounded-2xl bg-white/5 border border-white/10 space-y-3 animate-fadeIn text-xs">
             <p className="text-slate-400 text-[11px] leading-relaxed">
-              Enter your theme or problem statement (e.g. &quot;Smart Agriculture drone monitoring&quot; or &quot;AI Health diagnostics&quot;), and Ox Alpha will structure a winning pitch outline for this event!
+              Enter your theme or problem statement (e.g. &quot;Smart Agriculture drone monitoring&quot; or &quot;AI Health diagnostics&quot;), and ECell Help Assistance will structure a winning pitch outline for this event!
             </p>
 
             <form onSubmit={handleBrainstormPitch} className="flex gap-2">

@@ -33,7 +33,7 @@ export default function ChatbotWidget() {
     {
       id: 'welcome',
       sender: 'bot',
-      text: `Hello! I am the **E-Cell VITB Knowledge Assistant**. 
+      text: `Hello! I am **ECell Help Assistance**. 
 
 I can answer questions regarding our 12 recruitment departments, faculty convenors, Ideathon 2026, startup playbooks, and campus resources. 
 
@@ -122,7 +122,7 @@ How can I help you today?`,
               <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-slate-950" />
             </span>
             <Bot className="w-4 h-4 text-slate-950" />
-            <span className="hidden sm:inline">Ask E-Cell AI</span>
+            <span className="hidden sm:inline">ECell Help Assistance</span>
           </button>
         </div>
       )}
@@ -138,10 +138,10 @@ How can I help you today?`,
               </div>
               <div>
                 <h3 className="text-xs font-bold text-white flex items-center gap-1.5">
-                  <span>Ox Alpha Campus AI</span>
+                  <span>ECell Help Assistance</span>
                   <span className="w-1.5 h-1.5 rounded-full bg-emerald-400" />
                 </h3>
-                <p className="text-[10px] text-slate-400">Powered by Ox Alpha • Grounded VITB RAG</p>
+                <p className="text-[10px] text-slate-400">Official Campus Knowledge Base • VITB</p>
               </div>
             </div>
 

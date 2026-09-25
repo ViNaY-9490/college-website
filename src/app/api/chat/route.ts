@@ -142,7 +142,7 @@ export async function POST(req: NextRequest) {
       .map((d) => `[Source: ${d.title} (${d.source})]:\n${d.content}`)
       .join('\n\n');
 
-    const systemPrompt = `You are the official Ox Alpha AI Assistant for E-Cell VITB (Entrepreneurship Cell of Vishnu Institute of Technology, Bhimavaram, Andhra Pradesh).
+    const systemPrompt = `You are the official ECell Help Assistance for E-Cell VITB (Entrepreneurship Cell of Vishnu Institute of Technology, Bhimavaram, Andhra Pradesh).
 Official Motto: INNOVATE – CREATE – LEAD.
 Faculty Convenor: Dr. R. V. D. Rama Rao
 Co-Convenor: Dr. B. V. S. T. Sai
